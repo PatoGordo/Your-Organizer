@@ -4,14 +4,19 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
 
-    <title>VueRouter CDN Template</title>
+    <title>Your Organizer</title>
 
 		<!-- Page Styles -->
     <link href="Src/Styles/style.css" rel="stylesheet" type="text/css" />
 
+		<!-- Icons (IonIcons and FontAwesome) -->
+		<script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"></script>
+		<script nomodule="" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"></script>
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" rel="stylesheet" type="text/css" />
+
 		<!-- Vue/Vue-Router CDN -->
 		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
-		<script src="https://unpkg.com/vue-router"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vue-router"></script>
   </head>
   <body>
 
@@ -22,8 +27,8 @@
 		<script src="Src/Components/navbar.vue.js"></script><!-- Navbar Component -->
 
 		<!-- Pages Components -->
-		<script src="Src/Pages/home.vue.js"></script>
-		<script src="Src/Pages/about.vue.js"></script>
+		<script src="Src/Pages/todo.vue.js"></script>
+		<script src="Src/Pages/completedtodo.vue.js"></script>
 		<script src="Src/Pages/404.vue.js"></script>
 
 		<!-- Worker Components -->
@@ -32,3 +37,4 @@
 
   </body>
 </html>
+
