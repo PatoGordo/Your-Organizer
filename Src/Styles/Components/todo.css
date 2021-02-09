@@ -1,0 +1,126 @@
+.todo-title{
+	margin: 10px 0 10px 0;  
+}
+.input-label, .input-box{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: center;
+	justify-content: center;
+}
+.input-label{
+	margin: 10px 0 10px 0;
+	width: 40%;
+}
+.input-box{
+	border: 0;
+	padding: 15px;
+	border-radius: 10px;
+}
+.input-box.field{
+	border: 1px solid #7986CB;
+	margin-right: 5px;
+	font-size: large;
+	width: 100%;
+}
+.input-box.button{
+	background: #7986CB;
+	color: #fff;
+	font-size: x-large;
+}
+.todo-list{
+	border: 2px dashed #5C6BC0;
+	border-radius: 15px;
+	padding: 15px;
+	margin: 10px;
+	display: flex;
+	width: 40%;
+	max-height: 220px;
+	overflow-y: scroll;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center
+}
+.completed_{
+	text-decoration: line-through;
+	display: block;
+}
+.completed { 
+	text-decoration: line-through;
+	display: none;
+}
+.todo-item{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: center;
+	justify-content: center;
+}
+.todo-checkbox{
+	display: inline-grid;
+	text-justify: center;
+	width: 1.2em;
+	height: 1.2em;
+	border-color: #9575CD;
+}
+.return-message{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	padding: 15px;
+	margin: 20px 0 10px 0;
+	width: 40%;
+	border-radius: 10px;
+	border: 1px solid;
+}
+.warn{
+	color: #3D5AFE;
+	border-color: #3D5AFE;
+	background: rgba(61, 90, 254, 0.150);
+}
+.success{
+	color: #00E676;
+	border-color: #00E676;
+	background: rgba(0, 230, 119, 0.150);
+}
+.error{
+	color: #EF5350;
+	border-color: #EF5350;
+	background: rgba(239, 83, 80, 0.150);
+}
+.button-delete{
+	background: #EF5350;
+	color: #fff;
+	padding: 15px;
+	border-radius: 10px;
+	border: 0;
+	font-size: 1.1em;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: nowrap;
+	cursor: pointer;
+}
+.button-delete::after{
+	content: 'Delete all todos';
+}
+.button-delete:disabled{
+	opacity: .7;
+	cursor: not-allowed;
+}
+.button-delete:disabled:after{
+	content: 'Deleting...'
+}
+@media screen and (max-width: 850px) {
+	.return-message, .todo-list, .input-label{
+		width: 65%;
+	}
+}
+@media screen and (max-width: 480px) {
+	.return-message, .todo-list, .input-label{
+		width: 85%;
+	}
+}

@@ -1,13 +1,16 @@
 Vue.component('CompletedToDos', {
   data: function () {
     return {
-			todos: []
+			todos: [],
+			disabled: false
     }		
   },
 	methods:{
 		deleteAll(){
 			localStorage.clear()
-			this.todos = null
+			this.disabled = true
+			setTimeout(()=>{this.disabled = false}, 1000)
+			this.todos = []
 		}
 	},
 	mounted() {
@@ -30,7 +33,7 @@ Vue.component('CompletedToDos', {
 				{{ todo.text }}
 			</li>
 		</ul>
-		<button class="button-delete" @click="deleteAll()"><ion-icon name="trash-outline"></ion-icon> Delete all todos</button>
+		<button class="button-delete" @click="deleteAll()" :disabled="disabled"><ion-icon name="trash-outline" style="margin-right: 5px"></ion-icon> </button>
 		<p style="color: #E53935; font-size: 1.1em">Including To Do!</p>
 	</div>
 	`
