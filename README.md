@@ -1,11 +1,10 @@
-# Welcome to Vue Router CDN Template 👋
+# Welcome to Your Organizer 👋
 ![Version](https://img.shields.io/badge/version-1.1-blue.svg?cacheSeconds=2592000)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](#)
 [![Twitter: patogordoo](https://img.shields.io/twitter/follow/patogordoo.svg?style=social)](https://twitter.com/patogordoo)
 
-> A simple template to work with Vue and Vue Router by cdn.
-
-### ✨ [Demo](https://vue-router-template.ga)
+> A To Do app for you to organize your tasks and increase your productivity.
+### ✨ [Demo](https://patogordo.github.io/Your-Organizer/#/)
 
 ## Usage
 
