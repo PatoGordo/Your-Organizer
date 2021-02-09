@@ -10,7 +10,7 @@ Vue.component('app-navbar', {
   template: `
 	<p class="navbar">
 		<router-link to="/" class="navbar-item">To Do</router-link>
-		<router-link to="/completed" class="navbar-item">Completeds</router-link>
+		<router-link to="/completed" class="navbar-item">Completed</router-link>
 	</p>
 	`
 })
