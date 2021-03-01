@@ -6,8 +6,14 @@
 
     <title>Your Organizer</title>
 
-		<!-- Page Styles -->
-    <link href="Src/Styles/style.css" rel="stylesheet" type="text/css" />
+
+		<!-- Less Styles -->
+    <link href="Src/Styles/style.less" rel="stylesheet/less" type="text/css" />
+
+
+		<!-- Less CDN's -->
+		<script src="//cdn.jsdelivr.net/npm/less@3.13" ></script>
+
 
 		<!-- Icons (IonIcons and FontAwesome) -->
 		<script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"></script>
@@ -23,17 +29,17 @@
 		<div id="app"></div><!-- All components will be rendered here. -->
 
 		<!-- Components -->
-		<script src="Src/Components/components.vue.js"></script><!-- Set Here Simple Components -->
-		<script src="Src/Components/navbar.vue.js"></script><!-- Navbar Component -->
+		<script src="Src/Components/components.vue"></script><!-- Set Here Simple Components -->
+		<script src="Src/Components/navbar.vue"></script><!-- Navbar Component -->
 
 		<!-- Pages Components -->
-		<script src="Src/Pages/todo.vue.js"></script>
-		<script src="Src/Pages/completedtodo.vue.js"></script>
-		<script src="Src/Pages/404.vue.js"></script>
+		<script src="Src/Pages/todo.vue"></script>
+		<script src="Src/Pages/completedtodo.vue"></script>
+		<script src="Src/Pages/404.vue"></script>
 
 		<!-- Worker Components -->
     <script src="Src/router.js"></script><!-- Set your routes here -->
-    <script src="Src/app.vue.js"></script><!-- Components Render -->
+    <script src="Src/app.vue"></script><!-- Components Render -->
 
   </body>
 </html>

@@ -26,7 +26,10 @@ Vue.component('ToDos', {
 					this.returnMessageClass = 'warn'
 				}, 1500)
 			}
-    }
+    },
+		removeToDo(index){
+			this.todos.splice(index, 1)
+		}
 	},
 	mounted() {
     if (localStorage.getItem('ToDos')) this.todos = JSON.parse(localStorage.getItem('ToDos'));
@@ -46,11 +49,14 @@ Vue.component('ToDos', {
 			<input class="input-box field" placeholder="New item" v-model="newTodo" @keydown.enter="addTodo">
 			<button class="input-box button" @click="addTodo"><ion-icon name="add-outline"></ion-icon></button>
 		</label>
+		<h3 class="todo-title">To Do</h3>
 		<ul class="todo-list">
-			<h3 class="todo-title">To Do</h3>
-			<li v-for="todo in todos" class="todo-item":class="{ completed: todo.completed }" :style="todo.completed ? 'display: none' : 'display: block'">
-				<input type="checkbox" class="todo-checkbox" v-model="todo.completed">
-				{{ todo.text }}
+			<li v-for="(todo, index) in todos"class="todo-item":class="{ completed: todo.completed }" :style="todo.completed ? 'display: none' : 'display: flex'">
+				<span>
+					<input type="checkbox" class="todo-checkbox" v-model="todo.completed">
+					<p>{{todo.text}}</p>
+				</span>
+				<a class="remove-todo" @click="removeToDo(index)"><ion-icon class="remove-icon" name="close-outline"></ion-icon></a>
 			</li>
 		</ul>
 	</div>`
